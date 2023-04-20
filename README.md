@@ -42,7 +42,7 @@
 
 ## 🔨 Preparation
 
-Please find installation instructions in [install.md](https://github.com/showlab/Image2Paragraph/blob/main/install.md).
+Please find installation instructions in [install.md](install.md).
 
 ## 🌟 Start here
 
