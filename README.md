@@ -49,10 +49,10 @@ Please find installation instructions in [install.md](https://github.com/showlab
 ### Run in cmd
 
 ```
-python main.py --video_path examples/travel_in_roman.mp4 --openai_api_key xxxxx
+python main.py --video_path examples/buy_watermelon.mp4 --openai_api_key xxxxx
 ```
 
-The generated video document will be generated and saved in `examples/travel_in_roman.log`
+The generated video document will be generated and saved in `examples/buy_watermelon.log`
 
 ### Run in Gradio
 
