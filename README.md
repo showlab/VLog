@@ -1,6 +1,7 @@
 
 
 # 🎞 VLog: Video as a Long Document
+Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to ChatGPT, we can chat over the video! 
 
 ![vlog](figures/vlog.jpg)
 
