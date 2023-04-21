@@ -28,4 +28,3 @@ eggs/
 *.so
 *-checkpoint.ipynb
 !tests/data
-**/debug.py
