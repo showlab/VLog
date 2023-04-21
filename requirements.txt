@@ -24,5 +24,6 @@ langchain
 openai-whisper
 gradio
 unstructured
+faiss-cpu
 faiss-gpu
 yt-dlp

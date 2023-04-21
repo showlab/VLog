@@ -19,6 +19,8 @@ checkpoint
 *.eggs
 .eggs
 eggs/
+.tmp
+tmp/
 *.egg
 .DS_Store
 .vscode

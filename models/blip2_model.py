@@ -3,7 +3,8 @@ from PIL import Image
 from transformers import Blip2Processor, Blip2ForConditionalGeneration, BlipProcessor, BlipForConditionalGeneration
 
 class ImageCaptioner:
-    def __init__(self, device):
+    def __init__(self,  model_name="blip2-opt", device="cpu"):
+        self.model_name = model_name
         self.device = device
         self.processor, self.model = self.initialize_model()
         
@@ -12,18 +13,26 @@ class ImageCaptioner:
             self.data_type = torch.float32
         else:
             self.data_type = torch.float16
-        processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b-coco")
-        model = Blip2ForConditionalGeneration.from_pretrained(
-            "Salesforce/blip2-opt-2.7b-coco", torch_dtype=self.data_type, low_cpu_mem_usage=True)
-        
-        # processor = Blip2Processor.from_pretrained("Salesforce/blip2-flan-t5-xl")
-        # model = Blip2ForConditionalGeneration.from_pretrained(
-        #     "Salesforce/blip2-flan-t5-xl", torch_dtype=self.data_type, low_cpu_mem_usage=True)
+        processor, model = None, None
+        if self.model_name == "blip2-opt":
+            processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b-coco")
+            model = Blip2ForConditionalGeneration.from_pretrained(
+                "Salesforce/blip2-opt-2.7b-coco", torch_dtype=self.data_type, low_cpu_mem_usage=True)
+            
+        elif self.model_name == "blip2-flan-t5":
+            processor = Blip2Processor.from_pretrained("Salesforce/blip2-flan-t5-xl")
+            model = Blip2ForConditionalGeneration.from_pretrained(
+                "Salesforce/blip2-flan-t5-xl", torch_dtype=self.data_type, low_cpu_mem_usage=True)
         
         # for gpu with small memory
-        # processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-        # model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
+        elif self.model_name == "blip":
+            processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
+            model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
+            
+        else:
+            raise NotImplementedError(f"{self.model_name} not implemented.")
         model.to(self.device)
+        
         if self.device != 'cpu':
             model.half()
         return processor, model

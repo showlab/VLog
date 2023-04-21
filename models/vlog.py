@@ -23,8 +23,8 @@ class Vlogger :
         self.beta = args.beta
         self.data_dir = args.data_dir
         self.tmp_dir = args.tmp_dir
-        self.init_models()
-        
+        self.models_flag = False
+        self.init_llm()
         if not os.path.exists(self.tmp_dir):
             os.makedirs(self.tmp_dir)
         
@@ -32,16 +32,20 @@ class Vlogger :
         print('\033[1;34m' + "Welcome to the our Vlog toolbox...".center(50, '-') + '\033[0m')
         print('\033[1;33m' + "Initializing models...".center(50, '-') + '\033[0m')
         print('\033[1;31m' + "This may time-consuming, please wait...".center(50, '-') + '\033[0m')
-        os.environ["OPENAI_API_KEY"] = self.args.openai_api_key
         self.feature_extractor = FeatureExtractor(self.args)
         self.video_segmenter = VideoSegmentor(alpha=self.alpha, beta=self.beta)
-        self.image_captioner = ImageCaptioner(device=self.args.image_captioner_device)
+        self.image_captioner = ImageCaptioner(model_name=self.args.captioner_base_model, device=self.args.image_captioner_device)
         self.dense_captioner = DenseCaptioner(device=self.args.dense_captioner_device)
         self.audio_translator = AudioTranslator(model=self.args.audio_translator, device=self.args.audio_translator_device)
-        self.llm_reasoner = LlmReasoner(self.args)
         print('\033[1;32m' + "Model initialization finished!".center(50, '-') + '\033[0m')
+    
+    def init_llm(self):
+        print('\033[1;33m' + "Initializing LLM Reasoner...".center(50, '-') + '\033[0m')
+        os.environ["OPENAI_API_KEY"] = self.args.openai_api_key
+        self.llm_reasoner = LlmReasoner(self.args)
+        print('\033[1;32m' + "LLM initialization finished!".center(50, '-') + '\033[0m')
 
-    def video2log(self, video_path):
+    def video2log(self, video_path): 
         video_path = video_path
         video_id = os.path.basename(video_path).split('.')[0]
         if self.llm_reasoner.exist_vectorstore(video_id):
@@ -52,6 +56,10 @@ class Vlogger :
         except:
             pass        
 
+        if not self.models_flag:
+            self.init_models()
+            self.models_flag = True
+            
         logger = logger_creator(video_id)
         clip_features, video_length = self.feature_extractor(video_path, video_id)
         seg_windows = self.video_segmenter(clip_features, video_length)

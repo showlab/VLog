@@ -39,7 +39,8 @@ def get_empty_state():
 
 
 def on_prompt_template_change(prompt_template):
-    if not isinstance(prompt_template, str): return
+    if not isinstance(prompt_template, str): 
+        return
     return prompt_templates[prompt_template]
 
 
@@ -48,19 +49,13 @@ def submit_message(prompt, state):
 
     if not prompt:
         return gr.update(value=''), [(history[i]['content'], history[i+1]['content']) for i in range(0, len(history)-1, 2)], state
-    
-    # prompt_template = prompt_templates[prompt_template]
-
-    system_prompt = []
-    # if prompt_template:
-    #     system_prompt = [{ "role": "system", "content": prompt_template }]
 
     prompt_msg = { "role": "user", "content": prompt }
     
     try:
         history.append(prompt_msg)
         answer = vlogger.chat2video(prompt)
-        history.append({"role": "system", "content": answer}) #
+        history.append({"role": "system", "content": answer}) 
 
     
     except Exception as e:
@@ -125,11 +120,6 @@ with gr.Blocks(css=css) as demo:
                 input_message = gr.Textbox(show_label=False, placeholder="Enter text and press enter", visible=True).style(container=False)
                 btn_submit = gr.Button("Submit")
                 btn_clear_conversation = gr.Button("🔃 Start New Conversation")
-
-                # with gr.Accordion("Advanced parameters", open=False):
-                #     temperature = gr.Slider(minimum=0, maximum=2.0, value=0.7, step=0.1, label="Temperature", info="Higher = more creative/chaotic")
-                #     max_tokens = gr.Slider(minimum=100, maximum=4096, value=1000, step=1, label="Max tokens per response")
-                #     context_length = gr.Slider(minimum=1, maximum=10, value=2, step=1, label="Context length", info="Number of previous messages to send to the chatbot. Be careful with high values, it can blow up the token budget quickly.")
             
             with gr.Column():
                 vlog_btn = gr.Button("Generate Video Document")
@@ -157,8 +147,7 @@ with gr.Blocks(css=css) as demo:
 
     vidsub_btn.click(subvid_fn, [video_id], [video_inp])
 
-    # demo.load(download_prompt_templates, inputs=None, outputs=[prompt_template], queur=False)
-    demo.load()
+    demo.load(queur=False)
 
 
 demo.queue(concurrency_count=10)
