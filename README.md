@@ -58,14 +58,14 @@ The generated video document will be generated and saved in `examples/buy_waterm
 ### Run in Gradio
 
 ```
-python gradio.py --openai_api_key xxxxx
+python main_gradio.py --openai_api_key xxxxx
 ```
 
 ## 🙋 Suggestion
 
-The project is stay tuned 🔥
+Stay tuned for our project 🔥
 
-If you have more suggestions or functions need to be implemented in this codebase, feel free to drop us an email `kevin.qh.lin@gmail`, `leiwx52@gmail.com` or open an issue.
+If you have more suggestions or functions need to be implemented in this codebase, feel free to drop us an email `kevin.qh.lin@gmail.com`, `leiwx52@gmail.com` or open an issue.
 
 ## 😊 Acknowledgment
 

@@ -38,12 +38,6 @@ def get_empty_state():
     return {"total_tokens": 0, "messages": []}
 
 
-def on_prompt_template_change(prompt_template):
-    if not isinstance(prompt_template, str): 
-        return
-    return prompt_templates[prompt_template]
-
-
 def submit_message(prompt, state):
     history = state['messages']
 
@@ -68,6 +62,7 @@ def submit_message(prompt, state):
     chat_messages = [(history[i]['content'], history[i+1]['content']) for i in range(0, len(history)-1, 2)]
     return '', chat_messages, state
 
+
 def clear_conversation():
     vlogger.clean_history()
     return gr.update(value=None, visible=True), gr.update(value=None, interactive=True), None, gr.update(value=None, visible=True), get_empty_state()
@@ -78,6 +73,7 @@ def subvid_fn(vid):
     save_path = download_video(vid)
     return gr.update(value=save_path)
 
+
 def vlog_fn(vid_path):
     print(vid_path)
     if vid_path is None:
@@ -87,13 +83,12 @@ def vlog_fn(vid_path):
         log_text = "\n".join(log_list)
     return gr.update(value=log_text, visible=True)
 
+
 css = """
       #col-container {max-width: 80%; margin-left: auto; margin-right: auto;}
       #video_inp {min-height: 100px}
       #chatbox {min-height: 100px;}
       #header {text-align: center;}
-      #prompt_template_preview {padding: 1em; border-width: 1px; border-style: solid; border-color: #e0e0e0; border-radius: 4px;}
-      #total_tokens_str {text-align: right; font-size: 0.8em; color: #666;}
       #hint {font-size: 1.0em; padding: 0.5em; margin: 0;}
       .message { font-size: 1.2em; }
       """
@@ -126,17 +121,17 @@ with gr.Blocks(css=css) as demo:
                 vlog_outp = gr.Textbox(label="Document output", lines=40)
                 total_tokens_str = gr.Markdown(elem_id="total_tokens_str")
 
-    examples = gr.Examples(
-        examples=[
-            ["examples/basketball_vlog.mp4"],
-            ["examples/travel_in_roman.mp4"],
-            ["examples/C8lMW0MODFs.mp4"],
-            ["examples/huaqiang.mp4"],
-            ["examples/C8lMW0MODFs.mp4"],
-            ["examples/outcGtbnMuQ.mp4"],
-        ],
-        inputs=[video_inp],
-    )
+        examples = gr.Examples(
+            examples=[
+                ["examples/basketball_vlog.mp4"],
+                ["examples/travel_in_roman.mp4"],
+                ["examples/C8lMW0MODFs.mp4"],
+                ["examples/huaqiang.mp4"],
+                ["examples/C8lMW0MODFs.mp4"],
+                ["examples/outcGtbnMuQ.mp4"],
+            ],
+            inputs=[video_inp],
+        )
 
     gr.HTML('''<br><br><br><center>You can duplicate this Space to skip the queue:<a href="https://huggingface.co/spaces/anzorq/chatgpt-demo?duplicate=true"><img src="https://bit.ly/3gLdBN6" alt="Duplicate Space"></a><br></center>''')
 
@@ -144,7 +139,6 @@ with gr.Blocks(css=css) as demo:
     input_message.submit(submit_message, [input_message, state], [input_message, chatbot])
     btn_clear_conversation.click(clear_conversation, [], [input_message, video_inp, chatbot, vlog_outp, state])
     vlog_btn.click(vlog_fn, [video_inp], [vlog_outp])
-
     vidsub_btn.click(subvid_fn, [video_id], [video_inp])
 
     demo.load(queur=False)
