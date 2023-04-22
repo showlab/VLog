@@ -15,8 +15,9 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 ### **News**
 
-- 20/April/2023: We release our project on github and local gradio demo!
 - 23/April/2023: We release Huggingface gradio demo!
+- 20/April/2023: We release our project on github and local gradio demo!
+
 
 ### To Do List
 
