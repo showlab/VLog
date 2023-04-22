@@ -5,9 +5,18 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 ![vlog](figures/vlog.jpg)
 
+<a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/TencentARC/Vlog">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
+</a>
+<a src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" href="https://twitter.com/KevinQHLin/status/1649124447037841408">
+    <img src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" alt="Tweet">
+</a>
+
+
 ### **News**
 
-- 20/April/2023: We release our project on github and gradio demo!
+- 20/April/2023: We release our project on github and local gradio demo!
+- 23/April/2023: We release Huggingface gradio demo!
 
 ### To Do List
 
@@ -17,10 +26,10 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 - [x] Vision Captioner: BLIP2 + GRIT
 - [x] ASR Translator: Whisper (multilingual)
 - [x] Video Segmenter: KTS
+- [x] Huggingface Space
 
 **Doing** 
 
-- [ ] Huggingface Space
 - [ ] Improve Vision Models: MiniGPT-4, LLaVA, Family of Segment-anything
 - [ ] Replace ChatGPT with own trained LLM
 - [ ] Improve ASR Translator
