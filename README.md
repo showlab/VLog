@@ -1,9 +1,6 @@
 
 
 # 🎞 VLog: Video as a Long Document
-Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to ChatGPT, we can chat over the video! 
-
-![vlog](figures/vlog.jpg)
 
 <a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/TencentARC/Vlog">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
@@ -11,6 +8,10 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 <a src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" href="https://twitter.com/KevinQHLin/status/1649124447037841408">
     <img src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" alt="Tweet">
 </a>
+
+Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to ChatGPT, we can chat over the video! 
+
+![vlog](figures/vlog.jpg)
 
 
 ### **News**
@@ -31,9 +32,10 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 **Doing** 
 
-- [ ] Improve Vision Models: MiniGPT-4, LLaVA, Family of Segment-anything
+- [ ] Improve Vision Models: MiniGPT-4 / LLaVA, Family of Segment-anything
+- [ ] Introduce Temporal dependency
+- [ ] Improve ASR Translator for better alignment
 - [ ] Replace ChatGPT with own trained LLM
-- [ ] Improve ASR Translator
 
 ## 🧸 Examples
 
