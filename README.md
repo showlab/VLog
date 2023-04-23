@@ -16,7 +16,7 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 ### **News**
 
-- 23/April/2023: We release Huggingface gradio demo!
+- 23/April/2023: We release [Huggingface gradio demo](https://huggingface.co/spaces/TencentARC/VLog)!
 - 20/April/2023: We release our project on github and local gradio demo!
 
 
@@ -32,9 +32,10 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 **Doing** 
 
+- [ ] Optimize the codebase efficiency
 - [ ] Improve Vision Models: MiniGPT-4 / LLaVA, Family of Segment-anything
-- [ ] Introduce Temporal dependency
 - [ ] Improve ASR Translator for better alignment
+- [ ] Introduce Temporal dependency
 - [ ] Replace ChatGPT with own trained LLM
 
 ## 🧸 Examples
