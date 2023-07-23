@@ -13,7 +13,8 @@ class VideoSegmentor:
         clip_num = K.shape[0]
         max_seg_num = clip_num // self.alpha
         
-        cps, _ = cpd_auto(K, max_seg_num - 1, 0)
+        # cps, _ = cpd_auto(K, max_seg_num - 1, 0)
+        cps, _ = cpd_auto(K, max_seg_num - 1, vmax=1)
         seg_num = len(cps) + 1
 
         seg_points = [x * self.beta for x in cps]
