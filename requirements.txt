@@ -27,3 +27,4 @@ unstructured
 faiss-cpu
 faiss-gpu
 yt-dlp
+Pillow==7.1.2
