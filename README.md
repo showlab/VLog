@@ -43,7 +43,7 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 <details open><summary>[ News - GPT4 launch event ]</summary><img src="./figures/case5.png" alt="GPT4 launch event" style="width: 100%; height: auto;">
 </details>
-<details open><summary>[ TV series - 奥运潘展乐谈不要框住自己  ]</summary><img src="./figures/case2.png" alt="华强买瓜" style="width: 100%; height: auto;">
+<details open><summary>[ TV series - 奥运潘展乐谈不要框住自己  ]</summary><img src="./figures/case2.png" alt="奥运潘展乐" style="width: 100%; height: auto;">
 </details>
 
 <details><summary>[ TV series - The Big Bang Theory ]</summary><img src="./figures/case4.png" alt="The Big Bang Theory" style="width: 100%; height: auto;">
