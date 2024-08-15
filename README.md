@@ -79,7 +79,7 @@ python main_gradio.py --openai_api_key xxxxx
 
 Stay tuned for our project 🔥
 
-If you have more suggestions or functions need to be implemented in this codebase, feel free to drop us an email `kevin.qh.lin@gmail.com`, `leiwx52@gmail.com` or open an issue.
+If you have more suggestions or functions need to be implemented in this codebase, feel free to drop to me or original authors or open an issue.
 
 ## 😊 Acknowledgment
 
