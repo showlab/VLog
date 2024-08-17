@@ -1,6 +1,6 @@
 
 
-# 🎞 VLog: Video as a Long Document with Custom LLMs
+# 🎞 使用多模态大模型进行视频辅助分析
 
 <a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/TencentARC/Vlog">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
@@ -16,28 +16,20 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 ### **News**
 
-- 23/April/2023: We release [Huggingface gradio demo](https://huggingface.co/spaces/TencentARC/VLog)!
-- 20/April/2023: We release our project on github and local gradio demo!
+- 2024年8月17日: 我们在开源项目[VLog](https://github.com/showlab/VLog)的基础上开发了可以与任意本地或者online LLMs API进行交互的多模态视频分析程序!
 
 
 ### To Do List
 
 **Done**
 
-- [x] LLM Reasoner: ChatGPT (multilingual) + LangChain
-- [x] Vision Captioner: BLIP2 + GRIT
-- [x] ASR Translator: Whisper (multilingual)
-- [x] Video Segmenter: KTS
-- [x] Huggingface Space
 - [x] Using Custom LLMs
+- [x] Implement Chinese QA and Caption annotation
 
 **Doing** 
 
-- [ ] Optimize the codebase efficiency
-- [ ] Improve Vision Models: MiniGPT-4 / LLaVA, Family of Segment-anything
-- [ ] Improve ASR Translator for better alignment
-- [ ] Introduce Temporal dependency
-- [ ] Replace ChatGPT with own trained LLM
+- [ ] Improve QA quality
+
 
 ## 🧸 Examples
 
