@@ -1,6 +1,6 @@
 
 
-# 🎞 VLog: Video as a Long Document with Custom LLMs
+# 🎞 使用多模态大模型进行视频辅助分析
 
 <a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/TencentARC/Vlog">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
@@ -16,34 +16,26 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 ### **News**
 
-- 23/April/2023: We release [Huggingface gradio demo](https://huggingface.co/spaces/TencentARC/VLog)!
-- 20/April/2023: We release our project on github and local gradio demo!
+- 2024年8月17日: 我们在开源项目[VLog](https://github.com/showlab/VLog)的基础上开发了可以与任意本地或者online LLMs API进行交互的多模态视频分析程序!
 
 
 ### To Do List
 
 **Done**
 
-- [x] LLM Reasoner: ChatGPT (multilingual) + LangChain
-- [x] Vision Captioner: BLIP2 + GRIT
-- [x] ASR Translator: Whisper (multilingual)
-- [x] Video Segmenter: KTS
-- [x] Huggingface Space
 - [x] Using Custom LLMs
+- [x] Implement Chinese QA and Caption annotation
 
 **Doing** 
 
-- [ ] Optimize the codebase efficiency
-- [ ] Improve Vision Models: MiniGPT-4 / LLaVA, Family of Segment-anything
-- [ ] Improve ASR Translator for better alignment
-- [ ] Introduce Temporal dependency
-- [ ] Replace ChatGPT with own trained LLM
+- [ ] Improve QA quality
+
 
 ## 🧸 Examples
 
 <details open><summary>[ News - GPT4 launch event ]</summary><img src="./figures/case5.png" alt="GPT4 launch event" style="width: 100%; height: auto;">
 </details>
-<details open><summary>[ TV series - 奥运潘展乐谈不要框住自己  ]</summary><img src="./figures/case2.png" alt="奥运潘展乐" style="width: 100%; height: auto;">
+<details open><summary>[ News - 奥运潘展乐谈不要框住自己  ]</summary><img src="./figures/case2.png" alt="奥运潘展乐" style="width: 100%; height: auto;">
 </details>
 
 <details><summary>[ TV series - The Big Bang Theory ]</summary><img src="./figures/case4.png" alt="The Big Bang Theory" style="width: 100%; height: auto;">
@@ -79,7 +71,7 @@ python main_gradio.py --openai_api_key xxxxx
 
 Stay tuned for our project 🔥
 
-If you have more suggestions or functions need to be implemented in this codebase, feel free to drop us an email `kevin.qh.lin@gmail.com`, `leiwx52@gmail.com` or open an issue.
+If you have more suggestions or functions need to be implemented in this codebase, feel free to drop an Email to me or original authors or open an issue.
 
 ## 😊 Acknowledgment
 
