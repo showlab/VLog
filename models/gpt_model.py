@@ -1,6 +1,6 @@
 import os 
 import pdb
-import pickle
+import dill as pickle
 from langchain.llms import OpenAI
 from langchain.vectorstores.faiss import FAISS
 from langchain.chains import ChatVectorDBChain
@@ -63,22 +63,23 @@ class LlmReasoner():
             loader = UnstructuredFileLoader(os.path.join(self.data_dir, f"{video_id}.log"))
             raw_documents = loader.load()
 
-            # Split text
+            # devide text
             text_splitter = RecursiveCharacterTextSplitter()
             documents = text_splitter.split_documents(raw_documents)
 
-            # Load Data to vectorstore
+            # load data in vectorstore
             embeddings = OpenAIEmbeddings()
             vectorstore = FAISS.from_documents(documents, embeddings)
         
-            # Save vectorstore
+            # save vectorstore using dill
             with open(pkl_path, "wb") as f:
                 pickle.dump(vectorstore, f)
         
-        
+        # load vectorstore saved
         with open(pkl_path, 'rb') as file:
             self.vectorstore = pickle.load(file)
         
+        # set string of QA
         self.qa_chain = ChatVectorDBChain.from_llm(
             self.llm,
             self.vectorstore,
@@ -87,7 +88,7 @@ class LlmReasoner():
         )
         self.qa_chain.top_k_docs_for_context = self.top_k
 
-        return 
+        return
 
     def __call__(self, question):
         print(f"Question: {question}")
