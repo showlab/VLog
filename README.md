@@ -1,6 +1,6 @@
 
 
-# 🎞 使用多模态大模型进行视频辅助分析(Analyze Video via multimodal features and LLMs)
+# 🎞 使用多模态大模型进行视频辅助分析(Analyze Videos via multimodal features and LLMs)
 
 Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to custom LLMs, we can chat over the video! 
 
@@ -46,7 +46,7 @@ The generated video document will be generated and saved in `examples/buy_waterm
 ### Run in Gradio
 
 ```
-python main_gradio.py --openai_api_key xxxxx
+python main_gradio.py
 ```
 
 ## 🙋 Suggestion
