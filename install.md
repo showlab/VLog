@@ -24,7 +24,7 @@ cd ..
 Run
 
 ```
-conda create -n -y vlog python=3.10
+conda create -n -y vlog python=3.8
 conda activate vlog
 pip install -r requirements.txt
 ```
