@@ -1,22 +1,13 @@
 
 
-# 🎞 使用多模态大模型进行视频辅助分析
+# 🎞 使用多模态大模型进行视频辅助分析(Analyze Video via multimodal features and LLMs)
 
-<a src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" href="https://huggingface.co/spaces/TencentARC/Vlog">
-    <img src="https://img.shields.io/badge/%F0%9F%A4%97-Open%20in%20Spaces-blue" alt="Open in Spaces">
-</a>
-<a src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" href="https://twitter.com/KevinQHLin/status/1649124447037841408">
-    <img src="https://img.shields.io/twitter/url?color=blue&label=Tweet&logo=twitter&url=https%3A%2F%2Ftwitter.com%2FKevinQHLin%2Fstatus%2F1649124447037841408" alt="Tweet">
-</a>
-
-Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to ChatGPT, we can chat over the video! 
-
-![vlog](figures/vlog.jpg)
+Given a long video, we turn it into a doc containing visual + audio info. By sending this doc to custom LLMs, we can chat over the video! 
 
 
 ### **News**
 
-- 2024年8月17日: 我们在开源项目[VLog](https://github.com/showlab/VLog)的基础上开发了可以与任意本地或者online LLMs API进行交互的多模态视频分析程序!
+- 2024年8月17日: 我们在开源项目[VLog](https://github.com/showlab/VLog)的基础上开发了可以与任意本地或者online LLMs API (together.ai or Doubao API)进行交互的多模态视频分析程序!
 
 
 ### To Do List
@@ -32,19 +23,10 @@ Given a long video, we turn it into a doc containing visual + audio info. By sen
 
 
 ## 🧸 Examples
-
-<details open><summary>[ News - GPT4 launch event ]</summary><img src="./figures/case5.png" alt="GPT4 launch event" style="width: 100%; height: auto;">
+<details><summary>[ Vlog - 语言也有运动规律 ]</summary><img src="./figures/case1.png" alt="自然语言讲解" style="width: 100%; height: auto;">
 </details>
+
 <details open><summary>[ News - 奥运潘展乐谈不要框住自己  ]</summary><img src="./figures/case2.png" alt="奥运潘展乐" style="width: 100%; height: auto;">
-</details>
-
-<details><summary>[ TV series - The Big Bang Theory ]</summary><img src="./figures/case4.png" alt="The Big Bang Theory" style="width: 100%; height: auto;">
-</details>
-
-<details><summary>[ Travel video - Travel in Rome ]</summary><img src="./figures/case1.png" alt="Travel in Rome" style="width: 100%; height: auto;">
-</details>
-
-<details><summary>[ Vlog - Basketball training ]</summary><img src="./figures/case3.png" alt="Basketball training" style="width: 100%; height: auto;">
 </details>
 
 ## 🔨 Preparation
@@ -56,7 +38,7 @@ Please find installation instructions in [install.md](install.md).
 ### Run in cmd
 
 ```
-python main.py --video_path examples/buy_watermelon.mp4 --openai_api_key xxxxx
+python main.py --video_path examples/buy_watermelon.mp4 
 ```
 
 The generated video document will be generated and saved in `examples/buy_watermelon.log`
