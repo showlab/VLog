@@ -7,4 +7,4 @@
 |-----------|-----------|-----------|
 |**TL;DR**| Video Narration as Vocabulary|Video as Long Document|
 || <img src="VLog/assets/vlog.jpg" width="500"> | <img src="VLog-agent/figures/vlog.jpg" width="500"> |
-|**Introduction**|A novel, efficient video narrator (GPT2-based) with Narration Vocabulary via Generative Retrieval.|Given a video, we turn it into a textual document containing visual + audio info.|
+|**Introduction**|A novel, efficient video narrator (GPT2-based) with Narration Vocabulary via Generative Retrieval.|Given a video, we turn it into a textual document containing visual + audio info. By sending this doc to LLM, we can chat over the video!|
