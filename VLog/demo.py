@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 # Set up the model, with checkpoint, with vidcab
 #################################################
 exp_id = 
-data_dir = '/blob/v-lqinghong/data/world'
+data_dir = 
 dset_dir = 
 ckpt_file = get_latest_ckpt_id(dset_dir, exp_id)
 
