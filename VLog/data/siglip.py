@@ -75,9 +75,9 @@ def process_videos_in_directory(input_dir, output_dir, fps, total_nodes, cur_nod
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--input_dir', default="/blob/v-lqinghong/data/Ego_database/coin/videos", help="Path to the input directory")
+    parser.add_argument('--input_dir', default="coin/videos", help="Path to the input directory")
     parser.add_argument('--fps', type=int, default=2, help="Frames per second to extract")
-    parser.add_argument('--output_dir', default="/blob/v-lqinghong/data/Ego_database/coin/siglip-so400m-patch14-384-fps2",  help="Path to the output directory")    
+    parser.add_argument('--output_dir', default="coin/siglip-so400m-patch14-384-fps2",  help="Path to the output directory")    
     parser.add_argument('--total_nodes', type=int, default=1, help="Total number of nodes")
     parser.add_argument('--cur_node', type=int, default=0, help="Current node index (0-based)")
     parser.add_argument('--total_gpus', type=int, default=1, help="Total number of GPUs available")
