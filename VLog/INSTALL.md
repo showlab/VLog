@@ -2,6 +2,6 @@
 `pip install -r requirements.txt --user`
 
 # Datasets
-Download the dataset videos.
+1. Download the dataset videos.
 
-Then, use `python3 siglip.py` to extract and save the visual features.
+2. Use `python3 siglip.py` to extract and save the visual features.
