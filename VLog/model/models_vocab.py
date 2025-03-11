@@ -27,19 +27,6 @@ torch.backends.cuda.enable_mem_efficient_sdp(False)
 torch.backends.cuda.enable_flash_sdp(False)
 
 class VlogVocab:
-    # def __init__(self, vlog_model, vocab_url, args):
-    #     # VLog model
-    #     self.args = vars(args)
-    #     self.vlog = vlog_model
-    #     self.tokenizer =  vlog_model.tokenizer
-    #     # Vidcab
-    #     self.vocab = torch.load(vocab_url)
-    #     self.scene_embeds = self.vocab['scene_embed']
-    #     self.scene2vid = self.vocab['scene2vid']
-    #     # VidExtractor
-    #     self.siglip = AutoModel.from_pretrained("google/siglip-so400m-patch14-384").cuda()
-    #     self.processor = AutoProcessor.from_pretrained("google/siglip-so400m-patch14-384")
-    
     def __init__(self, args_url, ckpt_url, vocab_url):
         with open(args_url, 'r', encoding='utf-8') as file:
             args = json.load(file)
