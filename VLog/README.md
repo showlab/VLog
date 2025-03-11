@@ -16,7 +16,7 @@ Please see [INSTALL.md](INSTALL.md)
 Please see [TRAIN.md](TRAIN.md).
 
 ## ⭐ Run on your own video
-Please refer to `own_video.ipynb`
+Please refer to `demo.py` by providing your own video.
 
 ## 😊 Acknowledgment
 This codebase is built upon of [Fromage](https://github.com/kohjingyu/fromage).

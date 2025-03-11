@@ -1,7 +1,9 @@
+import os
 from enum import Enum
 import subprocess
 import sys
 import pdb
+import json
 import shutil
 import logging
 import torch
@@ -18,6 +20,10 @@ from tqdm import tqdm
 import math
 import Levenshtein as lev
 
+from IPython.display import Video
+from IPython.display import display
+from decord import VideoReader, cpu
+
 import random
 # import decord
 # from pycocoevalcap.eval import COCOEvalCap
@@ -25,6 +31,45 @@ import random
 
 def sort_list_by_time(lst, key=0):
     return sorted(lst, key=lambda x: x[key])
+
+def read_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
+
+def save_json(data, file_path):
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4)
+
+def display_video_frames(video_path, num_frames=1, start_sec=None, end_sec=None):
+    vr = VideoReader(video_path, ctx=cpu(0))
+    fps = vr.get_avg_fps()
+    duration = len(vr) / fps
+    
+    start_sec = start_sec if start_sec is not None else 0
+    end_sec = end_sec if end_sec is not None else duration
+    
+    if start_sec < 0 or end_sec > duration:
+        print("Error: start_sec or end_sec is out of video bounds.")
+        return
+    
+    start_frame = int(start_sec * fps)
+    end_frame = int(end_sec * fps)
+    step = max(1, (end_frame - start_frame) // num_frames)
+    
+    frame_indices = range(start_frame, end_frame, step)
+    
+    for idx in frame_indices:
+        frame = vr[idx].asnumpy()
+        img = Image.fromarray(frame)
+        display(img)
+    
+def get_latest_ckpt_id(dset_dir, exp_id):
+    ckpt_list = os.listdir(os.path.join(dset_dir, exp_id))
+    ckpt_nums = [int(f.split('_')[1]) for f in ckpt_list if f.startswith('ckpt_') and f.endswith('_best.pth.tar')]
+    ckpt_id = str(max(ckpt_nums) if ckpt_nums else None)
+    ckpt_file = f'ckpt_{ckpt_id}_best.pth.tar'
+    return ckpt_file
 
 def fuzzy_match(text, choices):
     scores = [-lev.distance(text, choice) for choice in choices]
