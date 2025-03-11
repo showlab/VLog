@@ -1,4 +1,5 @@
 import os
+import pdb
 import torch
 import cv2
 from PIL import Image
@@ -71,7 +72,7 @@ def process_videos_in_directory(input_dir, output_dir, fps, total_nodes, cur_nod
             # 如果特征文件已存在，则跳过
             if os.path.exists(output_path):
                 print(f"Node {cur_node}: Skipping existing file: {output_path}")
-                continue
+                # continue
     
             # 创建输出目录（如果不存在）
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
