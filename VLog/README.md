@@ -15,11 +15,13 @@ Please see [INSTALL.md](INSTALL.md)
 ## 🚀 Training
 Please see [TRAIN.md](TRAIN.md).
 
+Stay tune for more updates!
+
 ## ⭐ Run on your own video
-Download our our model and vocabulary [here](https://huggingface.co/KevinQHLin/VLog/tree/main).
+Download VLog model and vocabulary [here](https://huggingface.co/KevinQHLin/VLog/tree/main).
 ```bash
 mkdir pretrained
-huggingface-cli download KevinQHLin/VLog --repo-type model --local-dir ./
+huggingface-cli download KevinQHLin/VLog --repo-type model --local-dir ./pretrained/
 ```
 
 Then, refer to `demo.py` by providing your own video. Have fun!
