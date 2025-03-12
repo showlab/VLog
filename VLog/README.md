@@ -32,3 +32,5 @@ Then, refer to `demo.py` by providing your own video. Have fun!
 
 ## 😊 Acknowledgment
 This codebase is built upon of [Fromage](https://github.com/kohjingyu/fromage).
+
+We extend our gratitude to [LLoVi](https://github.com/CeeZh/LLoVi) for organizing EgoSchema annotations and [MVU](https://github.com/kahnchana/mvu) for the likelihood selection implementation. 
