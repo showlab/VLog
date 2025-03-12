@@ -20,14 +20,10 @@ import matplotlib.pyplot as plt
 #################################################
 # Set up the model, with checkpoint, with vidcab
 #################################################
-exp_id = 
-data_dir = 
-dset_dir = 
-ckpt_file = get_latest_ckpt_id(dset_dir, exp_id)
-
-args_url = os.path.join(dset_dir, exp_id, 'args.json')
-ckpt_url = os.path.join(dset_dir, exp_id, ckpt_file)
-vocab_url = 
+save_dir = 'pretrained'
+args_url = os.path.join(save_dir, 'args.json')
+ckpt_url = os.path.join(save_dir, 'vlog.pth.tar')
+vocab_url = os.path.join(save_dir, 'vocab_egoclip.pt')
 
 vlog_vocab = VlogVocab(args_url, ckpt_url, vocab_url)
 

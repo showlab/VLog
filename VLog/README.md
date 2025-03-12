@@ -16,7 +16,13 @@ Please see [INSTALL.md](INSTALL.md)
 Please see [TRAIN.md](TRAIN.md).
 
 ## ⭐ Run on your own video
-Please refer to `demo.py` by providing your own video.
+Download our our model and vocabulary by 
+```bash
+mkdir pretrained
+huggingface-cli download KevinQHLin/VLog --repo-type model --local-dir ./
+```
+
+Then, refer to `demo.py` by providing your own video. Have fun!
 
 ## 😊 Acknowledgment
 This codebase is built upon of [Fromage](https://github.com/kohjingyu/fromage).
