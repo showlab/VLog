@@ -28,10 +28,13 @@ vocab_url = os.path.join(save_dir, 'vocab_egoclip.pt')
 vlog_vocab = VlogVocab(args_url, ckpt_url, vocab_url)
 
 if __name__ == "__main__":
+    # Short video clip case:
     video_path = 'assets/3c0dffd0-e38e-4643-bc48-d513943dc20b_012_014.mp4'
     display_video_frames(video_path)
     clip_embed = vlog_vocab.encode_feature(video_path, fps=2)
     print(clip_embed.shape)
+
+    # Stay tune for Long video case.
 
     query="What is the action in the video?"
     # query="What is the overall activity in the video?"
