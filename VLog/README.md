@@ -1,5 +1,9 @@
 # VLog: Video Narration as Vocabulary
-A novel, efficient video narrator (GPT2-based) with Narration Vocabulary via Generative Retrieval.
+> **VLog: Video-Language Models by Generative Retrieval of Narration Vocabulary**<br>
+> [Kevin Qinghong Lin](https://qinghonglin.github.io/), [Mike Zheng Shou](https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=en)
+> <br>Show Lab @ National University of Singapore<br>
+
+**TL;DR:** A novel, efficient video narrator (GPT2-based) with Narration Vocabulary via Generative Retrieval.
 
 - **Video Narration as Vocabulary**
 
