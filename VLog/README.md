@@ -16,7 +16,7 @@ Please see [INSTALL.md](INSTALL.md)
 Please see [TRAIN.md](TRAIN.md).
 
 ## ⭐ Run on your own video
-Download our our model and vocabulary by 
+Download our our model and vocabulary [here](https://huggingface.co/KevinQHLin/VLog/tree/main).
 ```bash
 mkdir pretrained
 huggingface-cli download KevinQHLin/VLog --repo-type model --local-dir ./
