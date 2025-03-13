@@ -15,7 +15,7 @@ VLog aims to seek a new perspective on video-language understanding.
 If you find our work helpful, please kindly consider citing our paper.
 
 ```
-@misc{lin2025vlogvideolanguagemodelsgenerative,
+@misc{lin2025vlog,
       title={VLog: Video-Language Models by Generative Retrieval of Narration Vocabulary}, 
       author={Kevin Qinghong Lin and Mike Zheng Shou},
       year={2025},
