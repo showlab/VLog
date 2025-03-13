@@ -1,5 +1,5 @@
 # VLog: Video Narration as Vocabulary
-> **VLog: Video-Language Models by Generative Retrieval of Narration Vocabulary**<br>
+> **[VLog: Video-Language Models by Generative Retrieval of Narration Vocabulary](https://arxiv.org/abs/2503.09402)**<br>
 > [Kevin Qinghong Lin](https://qinghonglin.github.io/), [Mike Zheng Shou](https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=en)
 > <br>Show Lab @ National University of Singapore<br>
 
