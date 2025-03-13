@@ -34,3 +34,18 @@ Then, refer to `demo.py` by providing your own video. Have fun!
 This codebase is built upon of [Fromage](https://github.com/kohjingyu/fromage).
 
 We extend our gratitude to [LLoVi](https://github.com/CeeZh/LLoVi) for organizing EgoSchema annotations and [MVU](https://github.com/kahnchana/mvu) for the likelihood selection implementation. 
+
+## 🎓 BibTeX
+If you find our work helpful, please kindly consider citing our paper.
+
+```
+@misc{lin2025vlogvideolanguagemodelsgenerative,
+      title={VLog: Video-Language Models by Generative Retrieval of Narration Vocabulary}, 
+      author={Kevin Qinghong Lin and Mike Zheng Shou},
+      year={2025},
+      eprint={2503.09402},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.09402}, 
+}
+```
