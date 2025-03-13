@@ -4,7 +4,8 @@
 > [Kevin Qinghong Lin](https://qinghonglin.github.io/), [Mike Zheng Shou](https://scholar.google.com/citations?user=h1-3lSoAAAAJ&hl=en)
 > <br>Show Lab @ National University of Singapore<br>
 
-VLog aims to seek a new representation for video perception.
+VLog aims to seek a new perspective for video perception.
+
 👇 Click the branch to see more instructions.
 
 |      | [VLog (CVPR'25)](./VLog)   |[VLog-Agent](./VLog-agent/)|
