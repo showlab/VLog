@@ -1,6 +1,6 @@
 
 # VLog
-VLog aims to seek a new perspective for video perception.
+VLog aims to seek a new perspective for video-language understanding.
 
 👇 Click the branch to see more instructions.
 
